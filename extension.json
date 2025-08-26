@@ -1,0 +1,24 @@
+{
+    "name": "ADSyncDump",
+    "version": "v1.0.0",
+    "command_name": "adsyncdump",
+    "extension_author": "Paradoxis",
+    "original_author": "Paradoxis",
+    "repo_url": "https://github.com/Paradoxis/ADSyncDump-BOF",
+    "help": "Fully in-memory ADSync credential dumper without without third-party DLL's.",
+    "long_help": "The ADSyncDump BOF is a port of Dirkjan Mollema's adconnectdump.py / ADSyncDecrypt into a Beacon Object File.",
+    "depends_on": "coff-loader",
+    "entrypoint": "go",
+    "files": [
+        {
+            "os": "windows",
+            "arch": "amd64",
+            "path": "adsyncdump.x64.o"
+        },
+        {
+            "os": "windows",
+            "arch": "386",
+            "path": "adsyncdump.x86.o"
+        }
+    ]
+}

