@@ -1,6 +1,6 @@
 # ADSyncDump BOF
 
-The ADSyncDump BOF is a port of Dirkjan Mollema's [adconnectdump.py / ADSyncDecrypt](https://github.com/dirkjanm/adconnectdump) into a Beacon Object File (BOF) for use with Cobalt Strike / Sliver.
+The ADSyncDump BOF is a port of Dirkjan Mollema's [adconnectdump.py / ADSyncDecrypt](https://github.com/dirkjanm/adconnectdump) into a Beacon Object File (BOF) for use with Cobalt Strike, Sliver and Havoc.
 
 > [!NOTE]
 > The tool has been tested on a Windows Server 2019 with Azure AD Connect version `2.2.1.0`. The 32 bit version of the BOF is untested, but I included it for completeness sake. Use at your own risk.
